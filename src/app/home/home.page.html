@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Leaflet Map with Point</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>Change Basemap</ion-label>
+    <ion-select (ionChange)="changeBasemap($event)" interface="popover">
+      <ion-select-option value="osm">OpenStreetMap</ion-select-option>=
+      <ion-select-option value="topo">Topographic</ion-select-option>
+      <ion-select-option value="cycling">Cycling Map</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+<div id="mapId" style="height: 100%; width: 100%;"></div>
+</ion-content>
